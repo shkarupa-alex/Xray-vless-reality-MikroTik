@@ -58,6 +58,7 @@ cat <<EOF > /opt/xray/config/config.json
               {
                 "id": "$USER_ID",
                 "encryption": "$ENCRYPTION",
+		"flow": "xtls-rprx-vision",
                 "alterId": 0
               }
             ]
@@ -71,7 +72,7 @@ cat <<EOF > /opt/xray/config/config.json
           "fingerprint": "$FINGERPRINT_FP",
           "serverName": "$SERVER_NAME_SNI",
           "publicKey": "$PUBLIC_KEY_PBK",
-          "spiderX": "",
+          "spiderX": "/",
           "shortId": "$SHORT_ID_SID"
         }
       },
