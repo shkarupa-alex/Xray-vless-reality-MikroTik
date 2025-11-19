@@ -92,6 +92,6 @@ echo "Start Xray core"
 /tmp/xray/xray run -config /opt/xray/config/config.json &
 #pkill xray
 echo "Start tun2socks"
-/tmp/tun2socks/tun2socks -loglevel silent -tcp-sndbuf 3m -tcp-rcvbuf 3m -device tun0 -proxy socks5://127.0.0.1:10800 -interface eth0 &
+/tmp/tun2socks/tun2socks -loglevel silent -tcp-sndbuf 3m -tcp-rcvbuf 3m -device tun0 -proxy socks5://127.0.0.1:10800 -interface docker-xray-vle &
 #pkill tun2socks
 echo "Container customization is complete"
